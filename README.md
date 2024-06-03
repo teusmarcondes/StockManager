@@ -14,23 +14,18 @@ onde após logar, você é redirecionado para ela), produtos, fornecedores e cat
         descrição, entrada e saída e outras informações relevantes.
         Excluir Produtos: Exclua produtos.
         Editar Produtos: Altere informações de produtos.
-        Consultar o Saldo disponível: Realize a consulta de saldo dos produtos disponíveis.
-        Cadastrar Fornecedores: Registre os dados dos produtos, incluindo data, 
+        Consultar o Saldo disponível: Realize a consulta de saldo dos produtos     
+        disponíveis.
+        Cadastrar Fornecedores: Registre os dados de fornecedores, que incluem: Nome do 
+        produto, Nome do Fornecedor e contato. 
         descrição, e outras informações relevantes.
-        Excluir Fornecedores: Exclua produtos.
-        Editar Fornecedores: Altere informações de produtos.
-        Cadastrar Categorias: Registre os dados dos produtos, incluindo data, 
-        descrição, e outras informações relevantes.
-        Excluir Categorias: Exclua produtos.
-        Editar Categorias: Altere informações de produtos.
+        Excluir Fornecedores: Exclua fornecedores.
+        Editar Fornecedores: Altere informações de fornecedores.
+        Cadastrar Categorias: Registre os dados das categorias, que incluem: Nome do 
+        produto e Fornecedor.
+        Excluir Categorias: Exclua categorias.
+        Editar Categorias: Altere informações de categorias.
         
-O projeto foi desenvolvido através da linguagem de marcação HTML, que tem toda a estrutura
-da página, estilização CSS que deixou a página com todas as cores e estilos, alinhamentos e
-responsividade, juntamente com a linguagem de programação JavaScript que exibe as mensagens
-de erro, juntamente com a linguagem de programação PHP que faz toda interação com o banco 
-de dados e lógica do sistema.
+O projeto foi desenvolvido através da linguagem de marcação HTML, que tem toda a estrutura da página, estilização CSS que deixou a página com todas as cores e estilos, alinhamentos e responsividade, juntamente com a linguagem de programação JavaScript que exibe as mensagens de erro, juntamente com a linguagem de programação PHP que faz toda interação com o banco de dados e lógica do sistema.
 
-Queria agradecer a Edna que me ensinou e teve calma no processo em que estava fazendo o curso, 
-graças a ela, eu consegui iniciar o projeto com êxito e queria agradecer também ao SENAC que 
-me concedeu a oportunidade através do curso de Programador de Sistemas, de aprender muitas coisas 
-novas na área de programação.
+Queria agradecer a Edna que me ensinou e teve calma no processo em que estava fazendo o curso, graças a ela, eu consegui iniciar o projeto com êxito e queria agradecer também ao SENAC que me concedeu a oportunidade através do curso de Programador de Sistemas, de aprender muitas coisas novas na área de programação.
