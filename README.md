@@ -30,7 +30,7 @@ responsividade, juntamente com a linguagem de programação JavaScript que exibe
 de erro, juntamente com a linguagem de programação PHP que faz toda interação com o banco 
 de dados e lógica do sistema.
 
-Graças ao curso do SENAC e a explicação e calma da professora Edna, eu consegui concluir 
-o projeto com êxito e queria agradecer ao SENAC que me concedeu a oportunidade 
-através do curso de Programador de Sistemas, a oportunidade de aprender muitas coisas 
-novas.
+Queria agradecer a Edna que me ensinou e teve calma no processo em que estava fazendo o curso, 
+graças a ela, eu consegui iniciar o projeto com êxito e queria agradecer também ao SENAC que 
+me concedeu a oportunidade através do curso de Programador de Sistemas, de aprender muitas coisas 
+novas na área de programação.
