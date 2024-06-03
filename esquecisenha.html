@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+        .fa {
+            font-size: 24px;
+            margin-right: 5px
+        }
+
+        .row-first {
+            margin-bottom: 10px;
+            margin-top: 8px
+        }
+
+        .title-contact {
+            margin-top: 32px;
+            display: none;
+        }
+
+        a {
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease
+        }
+
+        .contact a {
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.25);
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            padding: 7px
+        }
+
+        .contact a:hover {
+            background-color: rgba(255, 255, 255, 0.85);
+            text-decoration: none
+        }
+
+        header {
+            background-color: rgb(14, 2, 121);
+            height: 120px;
+        }
+
+        footer {
+            color: #fff;
+            background-color: rgb(14, 2, 121);
+            text-align: center;
+            color: white;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            height: 180px;
+            line-height: 0px;
+            font-size: 20px;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.7)), url(img/fundo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        li {
+            margin: 50px;
+        }
+
+        i {
+            margin-right: 8px;
+        }
+
+        h4 a {
+            color: lightblue;
+        }
+
+        h4 a:hover {}
+
+        img {
+            width: 80px;
+            float: left;
+        }
+
+        .logo {
+            background-color: rgb(202, 93, 3);
+            width: 30%;
+            float: left;
+            margin: 20px 0px 0px 50px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .log {
+            font-size: 50px;
+            color: white;
+        }
+
+        .p, ul, .h2 {
+            color: white;
+            text-shadow: 0px 0px 10px black;
+        }
+
+        .h2 {
+            font-size: 30px;
+            margin: 25px;
+        }
+
+        .p, ul {
+            font-size: 20px;
+            margin: 25px 5px 5px 25px;
+        }
+
+        #menu a {
+            float: left;
+            color: white;
+            text-decoration: none;
+            font-size: 50px;
+            margin: 50px 10px 0px 10px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a84022c447.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".title-contact, .contact-email").fadeIn("slow");
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" title="Logo" alt="Logo">
+            <h1 class="log">Stock Manager</h1>
+        </div>
+        <div id="menu">
+            <a href="esquecisenha.html">Esqueci a senha</a>
+            <a href="login.php">Login</a>
+        </div>
+    </header>
+    <main>
+        <p class="p">Este sistema foi desenvolvido para facilitar a gestão de estoque em uma empresa ou logística. Com
+            este sistema, você poderá gerenciar os produtos, facilitando o acompanhamento do estoque e administrativo da
+            instituição.</p>
+        <h2 class="h2">Recursos Principais:</h2>
+        <ul>
+            <li><strong>Cadastrar Produtos:</strong> Registre os dados dos produtos, incluindo data, descrição, e outras
+                informações relevantes.</li>
+            <li><strong>Excluir Produtos:</strong> Exclua produtos</li>
+            <li><strong>Editar Produtos:</strong> Altere informações de produtos</li>
+            <li><strong>Consultar o Saldo disponível:</strong> Realize a consulta de saldo dos produtos disponíveis</li>
+        </ul>
+    </main>
+    <footer>
+        <div class="row">
+            <h1 class="title-contact">Contatos</h1>
+            <div class="col-md-4">
+                <h4><a href="mailto:suporte.stockmanager@gmail.com?subject=Esqueci a Senha Stock Manager">Envie um email para redifinir senha!</a></h4>
+                <h3><i class="fa-brands fa-whatsapp"></i>+55 (00) 90000-0000</h3>
+            </div>
+            <div class="col-md-4">
+                <div class="row contact row-first">
+                    <div class="col-md-6">
+                        <a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="mailto:suporte.stockmanager@gmail.com?subject=Esqueci a Senha Stock Manager" class="gmail" target="_blank"><i class="fa-regular fa-envelope"></i>Gmail</a>
+                    </div>
+                </div>
+                <div class="row contact">
+                    <div class="col-md-6">
+                        <a href="https://br.linkedin.com/" class="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="http://www.jquery2dotnet.com" class="github" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+                    </div>
+                </div>
+            </div>    
+                <div class="col-md-4">
+                    <h4 style="color:orange"><i class="fa-solid fa-screwdriver-wrench"></i>Suporte</h4>
+                    <h5 style="color:orange">Segunda a sexta-feira, das 9h às 18h.</h5>
+                    <h4>&copy; 2024 - Todos os direitos reservados</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
