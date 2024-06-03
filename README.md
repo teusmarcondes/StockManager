@@ -7,7 +7,7 @@ deixar o sistema seguro, então não tem como atualizar a senha direto no site,
 tecnicamente teria que me mandar um email ou uma mensagem, 
 se supostamente esse site estivesse funcionando e se não fosse apenas um projeto/teste) 
 O sistema possui quatro abas/páginas de navegação, que são: home (que é a inicial, 
-onde após logar, você é redirecionado para ela), produtos, fornecedores e categorias
+onde após logar, você é redirecionado para ela), produtos, fornecedores e categorias.
 
     Recursos Principais:
         Cadastrar Produtos: Registre os dados dos produtos, incluindo data, 
