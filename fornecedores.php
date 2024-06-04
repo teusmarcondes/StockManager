@@ -20,7 +20,7 @@ try{
     //se o formulário de inserção do fornecedor for submetido
     if(isset($_POST['nome_produto']) && isset($_POST['nome_fornecedor']) && isset($_POST['contato'])){
         //prepara a consulta para inserção de um novo fornecedor
-        $sql_inserir_fornecedor= $pdo->query("INSERT INTO fornecedores (id_produto, nome_fornecedor, contato) VALUES ('$escolha_produto', '$nome_fornecedor', '$contato')");
+        $sql_inserir_fornecedor= $pdo->query("INSERT INTO fornecedores (nome_produto, nome_fornecedor, contato) VALUES ('$escolha_produto', '$nome_fornecedor', '$contato')");
     }
 
 }catch(Exception $e){
@@ -69,20 +69,24 @@ try{
                 <?php
                     foreach($resultados as $linhas){ ?>
                         <tr style="background-color: white;"><td style="text-align: center; border: 1px solid #000000;"><?php 
-                        echo $linhas['id_produto']; ?></td>
+                        echo $linhas['nome_produto']; ?></td>
                         <td style="text-align: center; border: 1px solid #000000;"><?php echo $linhas['nome_fornecedor']; ?></td>
                         <td style="text-align: center; border: 1px solid #000000;"><?php echo $linhas['contato'];
                 ?></td>
                 <?php if($permitir_editar_excluir){?>
                     <!-- Editar registros -->
-                    <td style="text-align: center; border: 1px solid #000000;"><a href="?pagina=inserir_fornecedor&editar=<?php echo $linhas['id_fornecedor'];?>">
-                    <i class="fa-solid fa-user-pen"></i>
-                    </a></td>
-                    
+                    <td style="text-align: center; border: 1px solid #000000;">
+                        <a href="?pagina=inserir_fornecedor&editar=<?php echo $linhas['id_fornecedor'];?>">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </a>
+                    </td>
+
                     <!-- Excluir registros -->
-                    <td style="text-align: center; border: 1px solid #000000;"><a href="excluir_fornecedor.php?id_fornecedor=<?php echo $linhas['id_fornecedor'];?>" onclick="return confirm('Deseja excluir este registro?')">
-                    <i class="fa-solid fa-trash-can" style="color: #ff4747;"></i>
-                    </a></td>
+                    <td style="text-align: center; border: 1px solid #000000;">
+                        <a href="excluir_fornecedor.php?id_fornecedor=<?php echo $linhas['id_fornecedor'];?>" onclick="return confirm('Deseja excluir este registro?')">
+                            <i class="fa-solid fa-trash-can" style="color: #ff4747;"></i>
+                        </a>
+                    </td>
                 <?php }?>
                     </tr>
                 <?php }?>

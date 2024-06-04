@@ -9,9 +9,10 @@ require_once("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $escolha_produto= $_POST['escolha_produto'];
     $escolha_fornecedor= $_POST['escolha_fornecedor'];
+    $categoria= $_POST['categoria'];
 
     try{
-        $sql= $pdo->query("INSERT INTO categorias (id_produto, id_fornecedor) VALUES ('$escolha_produto', '$escolha_fornecedor')");
+        $sql= $pdo->query("INSERT INTO categorias (id_produto, id_fornecedor, categoria) VALUES ('$escolha_produto', '$escolha_fornecedor', '$categoria')");
 
         echo "<script>window.alert('Dados registrados com sucesso')</script>";
 
@@ -84,6 +85,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             }
             ?>
         </select>
+        <label for="">Categoria</label>
+        <input name="categoria" type="text">
         <button class="button" type="submit">Cadastrar</button>
     </form>
 <?php }else {
@@ -116,6 +119,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             }
             ?>
         </select>
+        <label for="">Categoria</label>
+        <input name="categoria" value="<?php echo $linhas['categoria']; ?>">
         <button class="button" type="submit">Atualizar</button>
     </form>
 <?php } ?>

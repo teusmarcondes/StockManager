@@ -10,6 +10,16 @@
     <style>
         @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
 
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        :root{
+            --azul: rgb(14, 2, 121);
+            --laranja: rgb(202, 93, 3);
+        }
+
         .fa {
             font-size: 24px;
             margin-right: 5px
@@ -29,7 +39,7 @@
             transition: all .3s ease;
             -webkit-transition: all .3s ease;
             -moz-transition: all .3s ease;
-            -o-transition: all .3s ease
+            -o-transition: all .3s ease;
         }
 
         .contact a {
@@ -42,7 +52,7 @@
             font-size: 20px;
             text-align: center;
             color: #fff;
-            padding: 7px
+            padding: 7px;
         }
 
         .contact a:hover {
@@ -51,20 +61,20 @@
         }
 
         header {
-            background-color: rgb(14, 2, 121);
-            height: 120px;
+            background-color: var(--azul);
+            height: 140px;
         }
 
         footer {
             color: #fff;
-            background-color: rgb(14, 2, 121);
+            background-color: var(--azul);
             text-align: center;
             color: white;
             width: 100%;
             position: fixed;
             bottom: 0;
+            line-height: 0;
             height: 180px;
-            line-height: 0px;
             font-size: 20px;
         }
 
@@ -79,7 +89,7 @@
         }
 
         li {
-            margin: 50px;
+            margin: 25px;
         }
 
         i {
@@ -90,24 +100,22 @@
             color: lightblue;
         }
 
-        h4 a:hover {}
-
         img {
             width: 80px;
             float: left;
         }
 
-        .logo {
+        .logo{
             background-color: rgb(202, 93, 3);
             width: 30%;
             float: left;
-            margin: 20px 0px 0px 50px;
+            margin: 25px 0px 0px 50px;
             padding: 5px;
             border-radius: 10px;
         }
-
-        .log {
-            font-size: 50px;
+        .log{
+            font-size: 45px;
+            font-weight: bold;
             color: white;
         }
 
@@ -126,18 +134,65 @@
             margin: 25px 5px 5px 25px;
         }
 
-        #menu a {
+
+        .col-md-4{
+            padding: 0px 5px 0px 0px;
+            padding: 0;
+        }
+
+        .col-md-6{
+            padding: 0px 5px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }
+
+        #menu{
+            float: right;
+            padding: 0px;
+        }
+
+        #menu a{
             float: left;
             color: white;
             text-decoration: none;
-            font-size: 50px;
-            margin: 50px 10px 0px 10px;
+            font-size: 40px;
+            margin: 50px 40px 0px 0px;
         }
+
+        #menu a:hover{
+            color: coral;
+        }
+        #logoc img, #logoc{
+            float: left
+        }
+
+        #menu a[class="esquecisenha"]{
+            color: rgb(255, 115, 0);
+            font-weight: bold;
+        }
+
+        a[class="instagram"]:hover{
+            background-color: palevioletred;
+        }
+
+        a[class="gmail"]:hover{
+            background-color: rgb(180, 11, 11);
+        }
+
+        a[class="linkedin"]:hover{
+            background-color: blue;
+        }
+
+        a[class="github"]:hover{
+            background-color: black;
+        }
+
     </style>
     <script src="https://kit.fontawesome.com/a84022c447.js" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
             $(".title-contact, .contact-email").fadeIn("slow");
+            $(".title-contact, .contact-email").fadeIn("slow");
+            $(".title-contact, .contact-email").fadeIn("slow"); 
         });
     </script>
 </head>
@@ -148,14 +203,11 @@
             <h1 class="log">Stock Manager</h1>
         </div>
         <div id="menu">
-            <a href="esquecisenha.html">Esqueci a senha</a>
+            <a href="esquecisenha.html" class="esquecisenha">Esqueci a senha</a>
             <a href="login.php">Login</a>
         </div>
     </header>
     <main>
-        <p class="p">Este sistema foi desenvolvido para facilitar a gestão de estoque em uma empresa ou logística. Com
-            este sistema, você poderá gerenciar os produtos, facilitando o acompanhamento do estoque e administrativo da
-            instituição.</p>
         <h2 class="h2">Recursos Principais:</h2>
         <ul>
             <li><strong>Cadastrar Produtos:</strong> Registre os dados dos produtos, incluindo data, descrição, e outras
@@ -164,13 +216,14 @@
             <li><strong>Editar Produtos:</strong> Altere informações de produtos</li>
             <li><strong>Consultar o Saldo disponível:</strong> Realize a consulta de saldo dos produtos disponíveis</li>
         </ul>
+        <p class="p">Este sistema foi desenvolvido para facilitar a gestão de estoque em uma empresa ou logística. Com este sistema, você poderá gerenciar os produtos, facilitando o acompanhamento do estoque e administrativo da instituição.</p>
     </main>
     <footer>
-        <div class="row">
+            
             <h1 class="title-contact">Contatos</h1>
             <div class="col-md-4">
                 <h4><a href="mailto:suporte.stockmanager@gmail.com?subject=Esqueci a Senha Stock Manager">Envie um email para redifinir senha!</a></h4>
-                <h3><i class="fa-brands fa-whatsapp"></i>+55 (00) 90000-0000</h3>
+                <h3><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/+5500900000000" target="_blank">+55 (00) 90000-0000</a></h3>
             </div>
             <div class="col-md-4">
                 <div class="row contact row-first">
@@ -186,17 +239,18 @@
                         <a href="https://br.linkedin.com/" class="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
                     </div>
                     <div class="col-md-6">
-                        <a href="http://www.jquery2dotnet.com" class="github" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+                        <a href="https://github.com/souteus" class="github" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
                     </div>
                 </div>
             </div>    
                 <div class="col-md-4">
+                    <br>
                     <h4 style="color:orange"><i class="fa-solid fa-screwdriver-wrench"></i>Suporte</h4>
-                    <h5 style="color:orange">Segunda a sexta-feira, das 9h às 18h.</h5>
-                    <h4>&copy; 2024 - Todos os direitos reservados</h4>
+                    <h5 style="color:orange">Segunda a sexta-feira, das 9h às 18h.</h5><br>
+                    <h4 class="h4">Mateus &copy; 2024 - Todos os direitos reservados</h4>
                 </div>
             </div>
-        </div>
+        
     </footer>
 </body>
 </html>

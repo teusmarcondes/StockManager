@@ -53,13 +53,13 @@ try{
             <?php if($permitir_inserir){?>
                 <div id="inserir">
                     <a href="?pagina=inserir_categoria">CADASTRAR NOVA CATEGORIA<i class="fa-solid fa-plus"></i></a>
-                    <a href="?pagina=inserir_categoria">ADICIONAR NOVA CATEGORIA<i class="fa-solid fa-plus"></i></a>
                 </div>
             <?php } ?>
             <thead>
                 <tr style="background-color: #ddd;">
                     <th style="text-align: center; border: 1px solid #000000;">Produto</th>
                     <th style="text-align: center; border: 1px solid #000000;">Nome do Fornecedor</th>
+                    <th style="text-align: center; border: 1px solid #000000;">Categoria</th>
                     <?php if($permitir_editar_excluir) {?>
                         <th style="text-align: center; border: 1px solid #000000;">Editar</th>
                         <th style="text-align: center; border: 1px solid #000000;">Remover</th>
@@ -71,6 +71,7 @@ try{
                     foreach($resultados as $linhas){ ?>
                         <tr style="background-color: white;"><td style="text-align: center; border: 1px solid #000000;"><?php echo $linhas['nome_produto']; ?></td>
                         <td style="text-align: center; border: 1px solid #000000;"><?php echo $linhas['nome_fornecedor']; ?></td>
+                        <td style="text-align: center; border: 1px solid #000000;"><?php echo $linhas['categoria']; ?></td>
                     <?php if($permitir_editar_excluir){?>   
                         <!-- Editar registros -->
                         <td style="text-align: center; border: 1px solid #000000;"><a href="?pagina=inserir_categoria&editar=<?php echo $linhas['id_fornecedor_produto'];?>">

@@ -13,18 +13,20 @@ try{
 
         #seleciona as tabelas
         $sql_produtos= $pdo->query("SELECT * FROM produtos");
-        $sql_fornecedores= $pdo->query("SELECT * FROM fornecedores");
-        
+
         #para obter o nome dos produtos em que estão cadastrados(INNER JOIN)
-        /* $sql_sfornecedores= $pdo->query("SELECT fornecedores.id_produto, produtos.nome_produto
-        FROM produtos
-        JOIN fornecedores ON fornecedores.id_produto = produtos.id_produto"); */ #recuperar o id do produto da tabela produtos para a tabela fornecedores
+        $sql_fornecedores = $pdo->query("SELECT fornecedores.id_produto, produtos.nome_produto, fornecedores.nome_fornecedor, fornecedores.contato
+        FROM 
+            produtos
+        JOIN 
+            fornecedores ON fornecedores.id_produto = produtos.id_produto");
 
         #para obter o nome dos produtos e o nome dos fornecedores em que estão cadastrados(INNER JOIN)
-        $sql_categorias= $pdo->query("SELECT categorias.id_fornecedor_produto, produtos.nome_produto, fornecedores.nome_fornecedor
-        FROM produtos
-        JOIN categorias ON categorias.id_produto = produtos.id_produto #recuperar o id do produto da tabela produtos para a tabela categorias
-        JOIN fornecedores ON categorias.id_fornecedor = fornecedores.id_fornecedor");
+        $sql_categorias= $pdo->query("SELECT categorias.id_fornecedor_produto, fornecedores.id_produto, fornecedores.nome_produto,fornecedores.id_fornecedor, fornecedores.nome_fornecedor,categorias.categoria
+        FROM 
+            fornecedores
+        JOIN 
+            categorias");
 }
 catch(Exception $e){
     echo "Erro ao conectar " .$e;
