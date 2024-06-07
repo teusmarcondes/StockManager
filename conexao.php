@@ -1,35 +1,22 @@
 <?php
+// Configurações de conexão com o banco de dados
+$server = "localhost";
+$user = "root";
+$password = "";
+$database = "estoque";
+$dsn = "mysql:dbname=$database;host=$server";
 
-$server= "localhost";
-$user= "root";
-$password= "";
-$database= "estoque";
-$dns= "mysql:dbname=$database;host=$server";
-
+// Define o fuso horário
 date_default_timezone_set('America/Sao_Paulo');
 
-try{
-    $pdo= new PDO("$dns", "$user", "$password");
-
-        #seleciona as tabelas
-        $sql_produtos= $pdo->query("SELECT * FROM produtos");
-
-        #para obter o nome dos produtos em que estão cadastrados(INNER JOIN)
-        $sql_fornecedores = $pdo->query("SELECT fornecedores.id_produto, produtos.nome_produto, fornecedores.nome_fornecedor, fornecedores.contato
-        FROM 
-            produtos
-        JOIN 
-            fornecedores ON fornecedores.id_produto = produtos.id_produto");
-
-        #para obter o nome dos produtos e o nome dos fornecedores em que estão cadastrados(INNER JOIN)
-        $sql_categorias= $pdo->query("SELECT categorias.id_fornecedor_produto, fornecedores.id_produto, fornecedores.nome_produto,fornecedores.id_fornecedor, fornecedores.nome_fornecedor,categorias.categoria
-        FROM 
-            fornecedores
-        JOIN 
-            categorias");
+try {
+    // Conexão com o banco de dados usando PDO
+    $pdo = new PDO($dsn, $user, $password, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]);
+} catch (PDOException $e) {
+    // Tratamento de erro
+    echo "Erro ao conectar: " . $e->getMessage();
 }
-catch(Exception $e){
-    echo "Erro ao conectar " .$e;
-}
-
 ?>

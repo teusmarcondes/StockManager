@@ -5,6 +5,7 @@
 :root{
   --azul: rgb(14, 2, 121);
   --laranja: rgb(202, 93, 3);
+  --cinza: #d9d9d9;
 }
 body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
@@ -108,14 +109,14 @@ button:hover{
       color: black;
     }
     header{
-      background-color: rgb(14, 2, 121);
+      background-color: var(--azul);
       height: 120px;
     }
     li{
       margin: 50px;
     }
     footer{
-      background-color: rgb(14, 2, 121);
+      background-color: var(--azul);
       text-align: center;
       color: white;
       width: 100%;
@@ -142,7 +143,7 @@ button:hover{
       margin: 95px auto;
       padding: 20px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      border: 20px solid #d9d9d9;
+      border: 20px solid var(--cinza);
       border-radius: 10px;
       background-color: transparent;
     }
@@ -151,7 +152,7 @@ button:hover{
       margin: 40px auto;
       padding: 20px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      border: 20px solid #d9d9d9;
+      border: 20px solid var(--cinza);
       border-radius: 10px;
       background-color: transparent;
     }
@@ -161,7 +162,7 @@ button:hover{
       padding: 20px;
       box-shadow: 0 0 8px rgba(0,0,0,0.3);
       background-color: white;
-      border: 20px solid #d9d9d9;
+      border: 20px solid var(--cinza);
       border-radius: 10px;
       background-color: transparent;
     }
@@ -193,7 +194,7 @@ button:hover{
       cursor: pointer;
     }
     .logo{
-      background-color: rgb(202, 93, 3);
+      background-color: var(--laranja);
       width: 30%;
       float: left;
       margin: 25px 0px 0px 50px;
@@ -205,25 +206,25 @@ button:hover{
       color: white;
     }
     .input{
-      background-color: #d9d9d9;
+      background-color: var(--cinza);
       font-size: 32px;
       padding: 10px 12px;
       float: left;
     }
     .i{
-      background-color: #d9d9d9;
+      background-color: var(--cinza);
       font-size: 32px;
       padding: 10px 12px;
       float: left;
     }
     .i1{
-      background-color: #d9d9d9;
+      background-color: var(--cinza);
       font-size: 32px;
       padding: 10px 8px;
       float: left;
     }
     .i2{
-      background-color: #d9d9d9;
+      background-color: var(--cinza);
       font-size: 32px;
       padding: 10px 8px;
       float: left;
@@ -322,14 +323,14 @@ button:hover{
       color: black;
     }
     header{
-      background-color: rgb(14, 2, 121);
+      background-color: var(--azul);
       height: 120px;
     }
     li{
       margin: 50px;
     }
     footer{
-      background-color: rgb(14, 2, 121);
+      background-color: var(--azul);
       text-align: center;
       color: white;
       width: 100%;
@@ -356,7 +357,7 @@ button:hover{
       margin: 95px auto;
       padding: 20px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      border: 20px solid #d9d9d9;
+      border: 20px solid var(--cinza);
       border-radius: 10px;
       background-color: transparent;
     }
@@ -365,7 +366,7 @@ button:hover{
       margin: 40px auto;
       padding: 20px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      border: 20px solid #d9d9d9;
+      border: 20px solid var(--cinza);
       border-radius: 10px;
       background-color: transparent;
     }
@@ -375,7 +376,7 @@ button:hover{
       padding: 20px;
       box-shadow: 0 0 8px rgba(0,0,0,0.3);
       background-color: white;
-      border: 20px solid #d9d9d9;
+      border: 20px solid var(--cinza);
       border-radius: 10px;
       background-color: transparent;
     }
@@ -407,7 +408,7 @@ button:hover{
       cursor: pointer;
     }
     .logo{
-      background-color: rgb(202, 93, 3);
+      background-color: var(--laranja);
       width: 30%;
       float: left;
       margin: 25px 0px 0px 50px;
@@ -419,25 +420,25 @@ button:hover{
       color: white;
     }
     .input{
-      background-color: #d9d9d9;
+      background-color: var(--cinza);
       font-size: 32px;
       padding: 10px 12px;
       float: left;
     }
     .i{
-      background-color: #d9d9d9;
+      background-color: var(--cinza);
       font-size: 32px;
       padding: 10px 12px;
       float: left;
     }
     .i1{
-      background-color: #d9d9d9;
+      background-color: var(--cinza);
       font-size: 32px;
       padding: 10px 8px;
       float: left;
     }
     .i2{
-      background-color: #d9d9d9;
+      background-color: var(--cinza);
       font-size: 32px;
       padding: 10px 8px;
       float: left;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 31/05/2024 às 21:00
+-- Tempo de geração: 07/06/2024 às 22:37
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -24,18 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `categoria`
---
-
-CREATE TABLE `categoria` (
-  `id_categoria` int(11) NOT NULL,
-  `categoria` varchar(50) NOT NULL,
-  `data_registro` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Estrutura para tabela `categorias`
 --
 
@@ -43,22 +31,16 @@ CREATE TABLE `categorias` (
   `id_fornecedor_produto` int(11) NOT NULL,
   `id_produto` int(11) NOT NULL,
   `id_fornecedor` int(11) NOT NULL,
-  `data_registro` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `categoria` varchar(50) NOT NULL,
+  `data_registro` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `categorias`
 --
 
-INSERT INTO `categorias` (`id_fornecedor_produto`, `id_produto`, `id_fornecedor`, `data_registro`) VALUES
-(3, 0, 0, '2024-05-28 13:32:05'),
-(4, 2, 2, '2024-05-28 13:32:05'),
-(5, 5, 3, '2024-05-28 13:32:05'),
-(6, 6, 4, '2024-05-28 13:32:05'),
-(7, 7, 6, '2024-05-28 13:32:05'),
-(8, 0, 0, '2024-05-28 13:32:05'),
-(9, 0, 0, '2024-05-29 12:08:45'),
-(10, 1, 1, '2024-05-29 12:08:56');
+INSERT INTO `categorias` (`id_fornecedor_produto`, `id_produto`, `id_fornecedor`, `categoria`, `data_registro`) VALUES
+(1, 1, 1, 'Categoria 1', '2024-06-07 17:04:37');
 
 -- --------------------------------------------------------
 
@@ -79,12 +61,7 @@ CREATE TABLE `fornecedores` (
 --
 
 INSERT INTO `fornecedores` (`id_fornecedor`, `id_produto`, `nome_fornecedor`, `contato`, `data_registro`) VALUES
-(1, '2', 'Fornecedor 1', '(41) 90000-0001', '2024-04-15 08:51:20'),
-(4, '2', 'Fornecedor 4', '(41) 90000-0004', '2024-04-15 08:52:18'),
-(6, '1', 'Forcedora 1', '(41) 90000-0000', '2024-05-27 16:07:29'),
-(9, '1', 'Mateus', '00', '2024-05-29 12:42:18'),
-(10, '7', 'Mathias', '01', '2024-05-31 09:28:58'),
-(11, ' 1 ', 'a', 'a', '2024-05-31 09:33:02');
+(1, '1', 'Fornecedor 1', '41 90000-0000', '2024-06-07 17:04:29');
 
 -- --------------------------------------------------------
 
@@ -107,11 +84,7 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id_produto`, `data`, `codigo`, `nome_produto`, `entradas`, `saidas`, `data_registro`) VALUES
-(1, '2024-03-15', 1, 'Produto 1', 10, 10, '2024-05-28 13:33:30'),
-(2, '2024-03-25', 2, 'Produto 2', 4, 5, '2024-05-28 13:33:30'),
-(5, '2024-03-27', 3, 'Produto 3', 15, 0, '2024-05-28 13:33:30'),
-(6, '2024-04-04', 4, 'Produto 4', 20, 5, '2024-05-28 13:33:30'),
-(7, '2024-04-01', 5, 'Produto 5', 100, 95, '2024-05-28 13:33:30');
+(1, '2024-06-07', 1, 'Produto 1', 1, 0, '2024-06-07 17:04:03');
 
 -- --------------------------------------------------------
 
@@ -125,7 +98,7 @@ CREATE TABLE `usuarios` (
   `usuario` varchar(30) NOT NULL,
   `senha` varchar(30) NOT NULL,
   `confsenha` varchar(30) NOT NULL,
-  `nivel` varchar(6) NOT NULL,
+  `nivel` varchar(6) NOT NULL DEFAULT 'padrao',
   `data_registro` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -134,22 +107,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `senha`, `confsenha`, `nivel`, `data_registro`) VALUES
-(1, 'Mateus', 'user1', '123', '123', 'padrao', '2024-03-13 11:36:07'),
-(2, 'Renata', 'user2', '321', '321', 'admin', '2024-03-14 10:21:51'),
-(3, 'Thiago', 'user3', '231', '231', 'padrao', '2024-03-15 09:53:53'),
-(4, 'Bruna', 'user4', '123', '123', 'admin', '2024-05-28 08:59:05'),
-(24, 'a', 'a', '123', '123', '', '2024-05-28 15:49:11'),
-(25, 'b', 'b', '123', '123', '', '2024-05-28 15:51:31');
+(1, 'Mateus', 'user1', '123', '123', 'admin', '2024-06-07 17:03:26');
 
 --
 -- Índices para tabelas despejadas
 --
-
---
--- Índices de tabela `categoria`
---
-ALTER TABLE `categoria`
-  ADD PRIMARY KEY (`id_categoria`);
 
 --
 -- Índices de tabela `categorias`
@@ -180,34 +142,28 @@ ALTER TABLE `usuarios`
 --
 
 --
--- AUTO_INCREMENT de tabela `categoria`
---
-ALTER TABLE `categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_fornecedor_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_fornecedor_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `fornecedores`
 --
 ALTER TABLE `fornecedores`
-  MODIFY `id_fornecedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_fornecedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

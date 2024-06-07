@@ -6,7 +6,7 @@ $nome_fornecedor= $_POST['nome_fornecedor'];
 $contato= $_POST['contato'];
 
 try{
-    $sql = $pdo->query("UPDATE fornecedores SET nome_produto = '$escolha_produto', nome_fornecedor = '$nome_fornecedor', contato = '$contato' WHERE id_fornecedor = '$id_fornecedor'");
+    $sql = $pdo->query("UPDATE fornecedores SET id_produto = '$escolha_produto', nome_fornecedor = '$nome_fornecedor', contato = '$contato' WHERE id_fornecedor = '$id_fornecedor'");
 
     header('location:index.php?pagina=fornecedores');
 
