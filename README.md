@@ -29,3 +29,5 @@ onde após logar, você é redirecionado para ela), produtos, fornecedores e cat
 O projeto foi desenvolvido através da linguagem de marcação HTML, que tem toda a estrutura da página, estilização CSS que deixou a página com todas as cores e estilos, alinhamentos e responsividade, juntamente com a linguagem de programação JavaScript que exibe as mensagens de erro, juntamente com a linguagem de programação PHP que faz toda interação com o banco de dados e lógica do sistema.
 
 Queria agradecer a Edna que me ensinou e teve calma no processo em que estava fazendo o curso, graças a ela, eu consegui iniciar o projeto com êxito e queria agradecer também ao SENAC que me concedeu a oportunidade através do curso de Programador de Sistemas, de aprender muitas coisas novas na área de programação.
+
+Link do site: stockmanager.great-site.net
