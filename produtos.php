@@ -72,6 +72,15 @@ try {
         td{
             background-color: white;
         }
+        .pr{
+            color: red;
+        }
+        .pg{
+            color: green;
+        }
+        .p2{
+            color: lightgreen;
+        }
     </style>
 </head>
 

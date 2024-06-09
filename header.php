@@ -31,7 +31,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="img/logo.png" title="Logo" alt="Logo">
+                <img class="logop" src="img/logo.png" title="Logo" alt="Logo">
                 <h1 class="log">Stock Manager</h1>
             </div>
             <div id="menu">

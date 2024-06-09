@@ -5,7 +5,7 @@ function Mensagem(msg, tempo){
     title: msg,
     timer: tempo,
     timerProgressBar: true,
-    footer: '<a href="esquecisenha.html">Esqueceu sua senha?</a>'
+    footer: '<a class="registrar" href="esqueciasenha.html">Esqueceu sua senha?</a>'
   });
 }
 

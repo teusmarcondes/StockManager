@@ -24,11 +24,11 @@ if(isset($_SESSION['usuario'])){
 <body>
     <h1 class="h1">Bem-vindo(a), <?php echo "$usuario_logado" ?> ao Sistema de Gestão de Estoque!</h1>
     <h2 class="h2">Recursos Principais:</h2>
-    <ul>
-        <li><strong>Cadastrar Produtos:</strong> Registre os dados dos produtos, incluindo data, descrição, e outras informações relevantes.</li>
-        <li><strong>Excluir Produtos:</strong> Exclua produtos</li>
-        <li><strong>Editar Produtos:</strong> Altere informações de produtos</li>
-        <li><strong>Consultar o Saldo disponível:</strong> Realize a consulta de saldo dos produtos disponíveis</li>
+    <ul class="ul">
+        <li class="li"><strong>Cadastrar Produtos:</strong> Registre os dados dos produtos, incluindo data, descrição, e outras informações relevantes.</li>
+        <li class="li"><strong>Excluir Produtos:</strong> Exclua produtos</li>
+        <li class="li"><strong>Editar Produtos:</strong> Altere informações de produtos</li>
+        <li class="li"><strong>Consultar o Saldo disponível:</strong> Realize a consulta de saldo dos produtos disponíveis</li>
     </ul>
     <p class="p">Este sistema foi desenvolvido para facilitar a gestão de estoque em uma empresa ou logística. Com este sistema, você poderá gerenciar os produtos, facilitando o acompanhamento do estoque e administrativo da instituição.</p>
 </body>

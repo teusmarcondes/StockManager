@@ -48,14 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        a {
-            color: #38b6ff;
-            font-size: 26px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <form class="form1" action="" method="post">
@@ -74,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($
             </div>  
             <input type="password" placeholder="Senha" name="password" required>
         </div>  
-        <a href="cadastro.php"><b><span>Não tem uma conta?</span> Registrar</b></a>
+        <a class="registrar" href="cadastro.php"><b><span>Não tem uma conta?</span> Registrar</b></a>
         <button class="button" type="submit">ENTRAR</button>
     </form>
 </body>

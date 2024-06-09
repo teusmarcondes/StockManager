@@ -1,525 +1,1180 @@
-*{
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+* {
   margin: 0;
   padding: 0;
 }
-:root{
+
+:root {
   --azul: rgb(14, 2, 121);
   --laranja: rgb(202, 93, 3);
   --cinza: #d9d9d9;
 }
-body{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) ,
-    rgba(0, 0, 0, 0.7)
-    ),url(../img/fundo.jpg);
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.7)), url(../img/fundo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
-a span{
+
+a {
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+h4 a {
+  color: lightblue;
+}
+
+h4 {
+  padding: 0;
+  margin: 8px;
+}
+
+h5, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+a span {
   color: white;
 }
-button:hover{
+
+button:hover {
   background-color: #aaaaaa;
 }
-#menu{
-  float: right;
-  padding: 0px;
-}
-#menu a:hover{
-  color: coral;
-}
-#logoc img, #logoc{
-  float: left
-}
-#inserir a:hover{
-  background-color: green;
-}
-.main{
+
+.main {
   border: 1px solid #000000;
 }
-.pr{
-  color: red;
-}
-.pg{
-  color: green;
-}
-.p2{
-  color: lightgreen;
-}
-.dt-search, .dt-layout-cell.dt-end, .dt-layout-cell.dt-start, .dt-layout-cell, .dt-length{
+
+.dt-search, .dt-layout-cell.dt-end, .dt-layout-cell.dt-start, .dt-layout-cell, .dt-length {
   background-color: #ccc;
 }
 
-/* 2 - Sintaxe, apenas para telas, breakpoint */
-@media screen and (max-width: 500px) {
-
+.nome {
+  margin-bottom: 10px;
 }
-  
-  /* 3 - Outros modos */
-  /* all, print, screen, speech */
-  @media print and (max-width: 600px) {
-    
+
+.user {
+  margin-bottom: 10px;
+}
+
+.senha {
+  margin-bottom: 10px;
+}
+
+.logoimg {
+  float: left;
+}
+
+.logo1 {
+  background-color: var(--laranja);
+  float: left;
+  border-radius: 10px;
+}
+
+.log1 {
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+}
+
+header {
+  background-color: var(--azul);
+}
+
+footer {
+  background-color: var(--azul);
+  text-align: center;
+  color: white;
+  position: fixed;
+}
+
+main {
+  background-color: #ccc;
+}
+
+.form1, .form2, .inserir {
+  border: 20px solid var(--cinza);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.cadastro {
+  color: #38b6ff;
+  text-decoration: none;
+}
+
+.button {
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.logo {
+  background-color: var(--laranja);
+  float: left;
+  border-radius: 10px;
+}
+
+.log {
+  color: white;
+}
+
+.img1 {
+  text-align: center;
+}
+
+.input, .i {
+  background-color: var(--cinza);
+  float: left;
+}
+
+.i1, .i2 {
+  background-color: var(--cinza);
+  float: left;
+}
+
+.voltar {
+  float: left;
+  background-color: lightgray;
+  border-radius: 50px;
+}
+
+.ul, .h1, .p, .h2, .pf, .lif, .ulf, .hf {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.footer {
+  float: left;
+}
+
+.direito {
+  text-align: center;
+}
+
+.hf, .pf, .lif {
+  color: white;
+}
+
+.h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.contact a:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  text-decoration: none
+}
+
+.col-md-4 {
+  padding: 0;
+}
+
+.col-md-6 {
+  padding: 0px 5px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.title-contact {
+  display: none;
+}
+
+.contact a {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  color: #fff;
+  padding: 7px;
+}
+
+#logoc h1 {
+  color: white;
+  text-align: center;
+}
+
+#logoc {
+  border: 1px solid #000000;
+  background-color: gray;
+  text-align: center;
+}
+
+#inserir {
+  background-color: #ccc;
+  border: 1px solid #000000;
+}
+
+#inserir a {
+  background-color: lightgreen;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+#menu a {
+  color: white;
+  float: left;
+  text-decoration: none;
+}
+
+#menu {
+  float: right;
+  padding: 0px;
+}
+
+#menu a:hover {
+  color: coral;
+}
+
+#logoc img, #logoc {
+  float: left
+}
+
+#inserir a:hover {
+  background-color: green;
+}
+
+a[class="instagram"]:hover {
+  background-color: palevioletred;
+}
+
+a[class="gmail"]:hover {
+  background-color: rgb(180, 11, 11);
+}
+
+a[class="linkedin"]:hover {
+  background-color: blue;
+}
+
+a[class="github"]:hover {
+  background-color: black;
+}
+
+/* 480px - 768px = tablet */
+@media (min-width: 480px) {
+  input {
+    width: 85%;
+    padding: 8px;
+    font-size: 30px;
+    margin-bottom: 8px;
   }
-  
-  /* 5 - Mobile first */
-  @media (min-width: 200px) {
-    
+
+  header {
+    height: 120px;
   }
-  
-  /* 6 - AND na media query */
-  @media (min-width: 300px) and (max-width: 400px) {
-    
+
+  footer {
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    line-height: 15px;
+    font-size: 20px;
   }
-  
-  /* 9 - Cuidado ao aplicar */
-  /* Regras depois da MQ a sobreescrevem */
-  @media (min-width: 600px) {
-    
+
+  main {
+    margin: 20px 20px 100px 20px;
+    padding: 5px;
   }
-  
-  h4 {
-    
+
+  a.instagram, a.gmail{
+    font-size: 18px;
+    width: 45%;
+    padding: 5px;
+    margin: 5px 5px 5px 25px;
   }
-  
-  /* 10 - breakpoints */
-  
-  /* 480px - 768px = tablet */
-  @media (min-width: 480px) {
-    
+
+  a.linkedin{
+    font-size: 18px;
+    width: 45%;
+    padding: 5px;
+    margin: -78px 5px 5px 270px;
   }
-  
-  /* 768px - 1024px = telas menores, laptops */
-  @media (min-width: 768px) {
-    
+
+  a.github{
+    font-size: 18px;
+    width: 45%;
+    padding: 5px;
+    margin: 0px 5px 5px 270px;
   }
-  
-  /* 1024px - 1200px = desktop */
-  @media (min-width: 1024px) {
-    input{
-      width: 85%;
-      padding: 8px;
-      font-size: 30px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      margin-bottom: 8px;
-      background-color: white;
-      color: black;
-    }
-    header{
-      background-color: var(--azul);
-      height: 120px;
-    }
-    li{
-      margin: 50px;
-    }
-    footer{
-      background-color: var(--azul);
-      text-align: center;
-      color: white;
-      width: 100%;
-      position: fixed;
-      bottom: 0;
-      height: 70px;
-      line-height: 15px;
-      font-size: 20px;
-    }
-    main{
-      margin: 20px 20px 100px 20px;
-      padding: 5px;
-      background-color: #ccc;
-    }
-    #menu a{
-      float: left;
-      color: white;
-      text-decoration: none;
-      font-size: 25px;
-      margin: 50px 10px 0px 10px;
-    }
-    .form1{
-      max-width: 400px;   
-      margin: 95px auto;
-      padding: 20px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      border: 20px solid var(--cinza);
-      border-radius: 10px;
-      background-color: transparent;
-    }
-    .form2{
-      max-width: 400px;   
-      margin: 40px auto;
-      padding: 20px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      border: 20px solid var(--cinza);
-      border-radius: 10px;
-      background-color: transparent;
-    }
-    .inserir{
-      max-width: 400px; /* largura do formulário */
-      margin: 50px auto; /* espaçamento externo */
-      padding: 20px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.3);
-      background-color: white;
-      border: 20px solid var(--cinza);
-      border-radius: 10px;
-      background-color: transparent;
-    }
-    .img1{
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .img2{
-      margin-bottom: 10px;
-      margin-top: 10px;
-      margin-left: 100px;
-      margin-right: 50px;
-    }
-    .cadastro{
-      color: #38b6ff;
-      font-size: 26px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-    .button{
-      width: 100%;
-      padding: 8px;
-      margin-top: 20px;
-      margin-bottom: 8px;
-      text-align: center;
-      font-size: 30px;
-      border: 1px solid #ccc;
-      background-color: white;
-      cursor: pointer;
-    }
-    .logo{
-      background-color: var(--laranja);
-      width: 30%;
-      float: left;
-      margin: 25px 0px 0px 50px;
-      padding: 5px;
-      border-radius: 10px;
-    }
-    .log{
-      font-size: 50px;
-      color: white;
-    }
-    .input{
-      background-color: var(--cinza);
-      font-size: 32px;
-      padding: 10px 12px;
-      float: left;
-    }
-    .i{
-      background-color: var(--cinza);
-      font-size: 32px;
-      padding: 10px 12px;
-      float: left;
-    }
-    .i1{
-      background-color: var(--cinza);
-      font-size: 32px;
-      padding: 10px 8px;
-      float: left;
-    }
-    .i2{
-      background-color: var(--cinza);
-      font-size: 32px;
-      padding: 10px 8px;
-      float: left;
-    }
-    .voltar{
-      float: left;
-      background-color: lightgray;
-      padding: 10px;
-      font-size: 32px;
-      border-radius: 50px;
-    }
-    .nome{
-      margin-bottom: 10px;
-    }
-    .user{
-      margin-bottom: 10px;
-    }
-    .senha{
-      margin-bottom: 10px;
-    }
-    .h1, .p, ul, .h2{
-      color: white;
-      text-shadow: 0px 0px 10px black;
-    }
-    .h1{
-      margin: 25px;
-      font-size: 50px;
-      text-align: center;
-    }
-    .h2{
-      font-size: 30px;
-      margin: 25px;
-    }
-    .p, ul{
-      font-size: 20px;
-      margin: 25px 5px 5px 25px;
-    }
-    .contato{
-      font-size: 20px;
-    }
-    .tel{
-      margin: 15px;
-    }
-    .footer{
-      float: left;
-      margin: 10px 50px 10px 100px;
-    }
-    .direito{
-      margin: 25px 10px 10px 25px;
-      text-align: center;
-    }
-    #logoc h1{
-      font-size: 50px; 
-      color: white;
-      text-align: center;
-    }
-    #logoc{
-      border: 1px solid #000000;
-      padding: 20px 0px 20px 0px;  
-      margin: 0px 0px 20px 0px;
-      background-color: gray;
-      width: 100%;
-      text-align: center;
-    }
-    #logoc h1{
-      font-size: 70px;
-      color: white;
-    }
-    #inserir{
-      padding: 20px 0px 20px 5px;
-      background-color: #ccc;
-      border: 1px solid #000000;
-    }
-    #inserir a{
-      background-color: lightgreen;
-      padding: 20px;
-      text-decoration: none;
-      border-radius: 10px;
-      border: 1px solid #000000;
-    }
-    #inserir i{ 
-      padding: 10px;
-    }
+
+  .form1, .form2, .inserir {
+    padding: 20px;
+    max-width: 400px;
   }
-  
-  /* 1200 e + = telas maiores, tvs */
-  @media (min-width: 1200px) {
-    input{
-      width: 85%;
-      padding: 8px;
-      font-size: 30px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      margin-bottom: 8px;
-      background-color: white;
-      color: black;
-    }
-    header{
-      background-color: var(--azul);
-      height: 120px;
-    }
-    li{
-      margin: 50px;
-    }
-    footer{
-      background-color: var(--azul);
-      text-align: center;
-      color: white;
-      width: 100%;
-      position: fixed;
-      bottom: 0;
-      height: 70px;
-      line-height: 15px;
-      font-size: 20px;
-    }
-    main{
-      margin: 20px 20px 100px 20px;
-      padding: 5px;
-      background-color: #ccc;
-    }
-    #menu a{
-      float: left;
-      color: white;
-      text-decoration: none;
-      font-size: 25px;
-      margin: 50px 10px 0px 10px;
-    }
-    .form1{
-      max-width: 400px;   
-      margin: 95px auto;
-      padding: 20px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      border: 20px solid var(--cinza);
-      border-radius: 10px;
-      background-color: transparent;
-    }
-    .form2{
-      max-width: 400px;   
-      margin: 40px auto;
-      padding: 20px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      border: 20px solid var(--cinza);
-      border-radius: 10px;
-      background-color: transparent;
-    }
-    .inserir{
-      max-width: 400px; /* largura do formulário */
-      margin: 50px auto; /* espaçamento externo */
-      padding: 20px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.3);
-      background-color: white;
-      border: 20px solid var(--cinza);
-      border-radius: 10px;
-      background-color: transparent;
-    }
-    .img1{
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .img2{
-      margin-bottom: 10px;
-      margin-top: 10px;
-      margin-left: 100px;
-      margin-right: 50px;
-    }
-    .cadastro{
-      color: #38b6ff;
-      font-size: 26px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-    .button{
-      width: 100%;
-      padding: 8px;
-      margin-top: 20px;
-      margin-bottom: 8px;
-      text-align: center;
-      font-size: 30px;
-      border: 1px solid #ccc;
-      background-color: white;
-      cursor: pointer;
-    }
-    .logo{
-      background-color: var(--laranja);
-      width: 30%;
-      float: left;
-      margin: 25px 0px 0px 50px;
-      padding: 5px;
-      border-radius: 10px;
-    }
-    .log{
-      font-size: 50px;
-      color: white;
-    }
-    .input{
-      background-color: var(--cinza);
-      font-size: 32px;
-      padding: 10px 12px;
-      float: left;
-    }
-    .i{
-      background-color: var(--cinza);
-      font-size: 32px;
-      padding: 10px 12px;
-      float: left;
-    }
-    .i1{
-      background-color: var(--cinza);
-      font-size: 32px;
-      padding: 10px 8px;
-      float: left;
-    }
-    .i2{
-      background-color: var(--cinza);
-      font-size: 32px;
-      padding: 10px 8px;
-      float: left;
-    }
-    .voltar{
-      float: left;
-      background-color: lightgray;
-      padding: 10px;
-      font-size: 32px;
-      border-radius: 50px;
-    }
-    .nome{
-      margin-bottom: 10px;
-    }
-    .user{
-      margin-bottom: 10px;
-    }
-    .senha{
-      margin-bottom: 10px;
-    }
-    .h1, .p, ul, .h2{
-      color: white;
-      text-shadow: 0px 0px 10px black;
-    }
-    .h1{
-      margin: 25px;
-      font-size: 50px;
-      text-align: center;
-    }
-    .h2{
-      font-size: 30px;
-      margin: 25px;
-    }
-    .p, ul{
-      font-size: 20px;
-      margin: 25px 5px 5px 25px;
-    }
-    .contato{
-      font-size: 20px;
-    }
-    .tel{
-      margin: 15px;
-    }
-    .footer{
-      float: left;
-      margin: 10px 50px 10px 100px;
-    }
-    .direito{
-      margin: 25px 10px 10px 25px;
-      text-align: center;
-    }
-    #logoc h1{
-      font-size: 50px; 
-      color: white;
-      text-align: center;
-    }
-    #logoc{
-      border: 1px solid #000000;
-      padding: 20px 0px 20px 0px;  
-      margin: 0px 0px 20px 0px;
-      background-color: gray;
-      width: 100%;
-      text-align: center;
-    }
-    #logoc h1{
-      font-size: 70px;
-      color: white;
-    }
-    #inserir{
-      padding: 20px 0px 20px 5px;
-      background-color: #ccc;
-      border: 1px solid #000000;
-    }
-    #inserir a{
-      background-color: lightgreen;
-      padding: 20px;
-      text-decoration: none;
-      border-radius: 10px;
-      border: 1px solid #000000;
-    }
-    #inserir i{ 
-      padding: 10px;
-    }
+
+  .form1 {
+    margin: 50px auto;
   }
+
+  .form2 {
+    margin: 10px auto;
+  }
+
+  .inserir {
+    margin: 50px auto;
+  }
+
+  .img1 {
+    margin-bottom: 20px;
+  }
+
+  .img2 {
+    margin: 10px 50px 10px 100px;
+  }
+
+  .cadastro {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 8px;
+    font-size: 30px;
+  }
+
+  .logo {
+    width: 30%;
+    margin: 25px 0px 0px 50px;
+    padding: 5px;
+  }
+
+  .log {
+    font-size: 16px;
+  }
+
+  .input, .i {
+    font-size: 32px;
+    padding: 10px 12px;
+  }
+
+  .i1, .i2 {
+    font-size: 32px;
+    padding: 10px 8px;
+  }
+
+  .voltar {
+    padding: 10px;
+    font-size: 32px;
+  }
+
+  .h1 {
+    margin: 25px;
+    font-size: 15px;
+  }
+
+  .h2 {
+    font-size: 15px;
+    margin: 15px;
+  }
+
+  h4{
+    margin: 0;
+    padding: 0;
+  }
+
+  .p, .ul {
+    font-size: 14px;
+    margin: 10px 5px 5px 10px;
+  }
+
+  .li {
+    margin: 25px;
+  }
+
+  .contato {
+    font-size: 15px;
+  }
+
+  .tel {
+    margin: 15px;
+    font-size: 8px;
+  }
+
+  .footer {
+    margin: 5px 0px 0px 0px;
+  }
+
+  .direito {
+    margin: 15px 0px 0px 0px;
+    font-size: 10px;
+  }
+
+  .fa-brands, .fa-regular, .fa-envelope {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  .fo1 {
+    width: 100%;
+    bottom: 0;
+    height: 200px;
+    line-height: 15px;
+  }
+
+  .contact a {
+    font-size: 20px;
+  }
+
+  .logo1 {
+    width: 40%;
+    margin: 25px 0px 0px 50px;
+    padding: 5px;
+  }
+
+  .logoimg{
+    width: 30px;
+  }
+
+  .log1 {
+    font-size: 20px;
+  }
+
+  .hf {
+    font-size: 20px;
+    margin: 25px;
+  }
+
+  .ulf {
+    margin: 25px;
+  }
+
+  .lif {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .pf {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .registrar {
+    color: #38b6ff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  .logop {
+    width: 30px;
+  }
+
+  .title-contact {
+    font-size: 20px;
+    margin: 5px 0px 0px 0px;
+  }
+
+  .header{
+    height: 100px;
+  }
+
+  #logoc h1 {
+    margin: 30px 0px 0px 0px;
+    font-size: 30px;
+  }
+
+  #logoc {
+    padding: 20px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+  }
+
+  #inserir {
+    padding: 20px 0px 20px 5px;
+  }
+
+  #inserir a {
+    padding: 20px;
+  }
+
+  #inserir i {
+    padding: 10px;
+  }
+
+  #menu a {
+    font-size: 18px;
+    margin: 20px 10px 0px 10px;
+  }
+}
+
+/* 768px - 1024px = telas menores, laptops */
+@media (min-width: 768px) {
+  input {
+    width: 85%;
+    padding: 8px;
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  header {
+    height: 120px;
+  }
+
+  .li {
+    margin: 50px;
+  }
+
+  footer {
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    line-height: 15px;
+    font-size: 20px;
+  }
+
+  main {
+    margin: 20px 20px 100px 20px;
+    padding: 5px;
+  }
+
+  #menu a {
+    font-size: 18px;
+    margin: 25px 10px 0px 10px;
+  }
+
+  a.instagram, a.gmail, a.linkedin, a.github{
+    width: 100%;
+    margin: 0;
+  }
+
+  .form1, .form2, .inserir {
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .form1 {
+    margin: 95px auto;
+  }
+
+  .form2 {
+    margin: 40px auto;
+  }
+
+  .inserir {
+    margin: 50px auto;
+  }
+
+  .img1 {
+    margin-bottom: 20px;
+  }
+
+  .img2 {
+    margin: 10px 50px 10px 100px;
+  }
+
+  .cadastro {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .logo {
+    width: 30%;
+    margin: 25px 0px 0px 50px;
+    padding: 5px;
+  }
+
+  .log {
+    font-size: 20px;
+  }
+
+  .logop {
+    width: 30px;
+  }
+
+  .input, .i {
+    font-size: 32px;
+    padding: 10px 12px;
+  }
+
+  .i1, .i2 {
+    font-size: 32px;
+    padding: 10px 8px;
+  }
+
+  .voltar {
+    padding: 10px;
+    font-size: 32px;
+  }
+
+  .h1 {
+    margin: 25px;
+    font-size: 25px;
+  }
+
+  .h2 {
+    margin: 25px;
+    font-size: 20px;
+  }
+
+  .p, .ul {
+    font-size: 20px;
+    margin: 25px 5px 5px 25px;
+  }
+
+  .contato {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .tel {
+    font-size: 12px;
+    margin: 15px;
+  }
+
+  .footer {
+    margin: 0;
+  }
+
+  .direito {
+    margin: 25px 10px 10px 25px;
+    font-size: 15px;
+  }
+
+  .fa-brands, .fa-regular, .fa-envelope {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  .row-first {
+    margin-bottom: 10px;
+    margin-top: 8px
+  }
+
+  .fo1 {
+    width: 100%;
+    bottom: 0;
+    height: 150px;
+    line-height: 15px;
+    font-size: 20px;
+  }
+
+  .sendemail, .zap{
+    margin: 25px;
+  }
+
+
+
+  .contact a {
+    font-size: 20px;
+  }
+
+  .logo1 {
+    width: 30%;
+    margin: 25px 0px 0px 50px;
+    padding: 5px;
+  }
+
+  .log1 {
+    font-size: 20px;
+  }
+
+  .hf {
+    font-size: 50px;
+    margin: 25px;
+  }
+
+  .ulf {
+    margin: 25px;
+  }
+
+  .lif {
+    font-size: 20px;
+    margin: 25px;
+  }
+
+  .pf {
+    font-size: 20px;
+    margin: 25px;
+  }
+
+  #logoc h1 {
+    font-size: 50px;
+  }
+
+  #logoc {
+    padding: 20px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+  }
+
+  #inserir {
+    padding: 20px 0px 20px 5px;
+  }
+
+  #inserir a {
+    padding: 20px;
+  }
+
+  #inserir i {
+    padding: 10px;
+  }
+}
+
+/* 1024px - 1200px = desktop */
+@media (min-width: 1024px) {
+  input {
+    width: 90%;
+    padding: 8px;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  header {
+    height: 120px;
+  }
+
+  footer {
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    line-height: 15px;
+    font-size: 20px;
+  }
+
+  main {
+    margin: 20px 20px 100px 20px;
+    padding: 5px;
+  }
+
+  #menu a {
+    font-size: 25px;
+    margin: 50px 10px 0px 10px;
+  }
+
+  .form1, .form2, .inserir {
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .form1 {
+    margin: 25px auto;
+  }
+
+  .form2 {
+    margin: 5px auto;
+  }
+
+  .inserir {
+    margin: 50px auto;
+  }
+
+  .registrar {
+    color: #38b6ff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  .img1 {
+    margin-bottom: 20px;  
+  }
+
+  .img2 {
+    margin: 40px 50px 10px 100px;
+    width: 100px;
+  }
+
+  .cadastro {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  .logo {
+    width: 30%;
+    margin: 25px 0px 0px 50px;
+    padding: 5px;
+  }
+
+  .log {
+    font-size: 35px;
+  }
+
+  .logop {
+    width: 50px;
+  }
+
+  .input, .i {
+    font-size: 16px;
+    padding: 10px 11px;
+  }
+
+  .i1, .i2 {
+    font-size: 16px;
+    padding: 10px 8px;
+  }
+
+  .voltar {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .h1 {
+    margin: 25px;
+    font-size: 30px;
+  }
+
+  .h2 {
+    font-size: 30px;
+    margin: 25px;
+  }
+
+  .h4{
+    font-size: 15px;
+  }
+
+  .li {
+    margin: 25px;
+  }
+
+  .p, .ul {
+    font-size: 20px;
+    margin: 25px 5px 5px 25px;
+  }
+
+  .contato {
+    font-size: 20px;
+  }
+
+  .tel {
+    margin: 15px;
+  }
+
+  .footer {
+    margin: 10px 0px 10px 10px;
+  }
+
+  .direito {
+    margin: 25px 10px 10px 25px;
+    font-size: 17px;
+  }
+
+  .fa-brands, .fa-regular, .fa-envelope {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  .row-first {
+    margin-bottom: 10px;
+    margin-top: 8px
+  }
+
+  .fo1 {
+    width: 100%;
+    bottom: 0;
+    height: 130px;
+    line-height: 15px;
+    font-size: 20px;
+  }
+
+  .contact a {
+    font-size: 20px;
+  }
+
+  .logoimg{
+    width: 50px;
+  }
+
+  .logo1 {
+    width: 30%;
+    margin: 25px 0px 0px 50px;
+    padding: 5px;
+  }
+
+  .log1 {
+    font-size: 35px;
+  }
+
+  .hf {
+    font-size: 25px;
+    margin: 25px;
+  }
+
+  .ulf {
+    margin: 20px;
+  }
+
+  .lif {
+    font-size: 15px;
+    margin: 10px;
+  }
+
+  .pf {
+    font-size: 15px;
+    margin: 25px;
+  }
+
+  #logoc h1 {
+    font-size: 50px;
+  }
+
+  #logoc {
+    padding: 20px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+  }
+
+  #inserir {
+    padding: 20px 0px 20px 5px;
+  }
+
+  #inserir a {
+    padding: 20px;
+  }
+
+  #inserir i {
+    padding: 10px;
+  }
+}
+
+/* 1200 e + = telas maiores, tvs */
+@media (min-width: 1200px) {
+  input {
+    width: 85%;
+    padding: 8px;
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  header {
+    height: 120px;
+  }
+
+  .li {
+    margin: 50px;
+  }
+
+  footer {
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    line-height: 15px;
+    font-size: 20px;
+  }
+
+  main {
+    margin: 20px 20px 100px 20px;
+    padding: 5px;
+  }
+
+  #menu a {
+    font-size: 25px;
+    margin: 50px 10px 0px 10px;
+  }
+
+  .form1, .form2, .inserir {
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .form1 {
+    margin: 95px auto;
+  }
+
+  .form2 {
+    margin: 40px auto;
+  }
+
+  .inserir {
+    margin: 50px auto;
+  }
+
+  .img1 {
+    margin-bottom: 20px;
+  }
+
+  .img2 {
+    margin: 10px 50px 10px 100px;
+  }
+
+  .cadastro {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .logo {
+    width: 30%;
+    margin: 25px 0px 0px 50px;
+    padding: 5px;
+  }
+
+  .log {
+    font-size: 40px;
+  }
+
+  .input, .i {
+    font-size: 32px;
+    padding: 10px 12px;
+  }
+
+  .i1, .i2 {
+    font-size: 32px;
+    padding: 10px 8px;
+  }
+
+  .voltar {
+    padding: 10px;
+    font-size: 32px;
+  }
+
+  .h1 {
+    margin: 25px;
+    font-size: 40px;
+  }
+
+  .h2 {
+    font-size: 30px;
+    margin: 25px;
+  }
+
+  .p, .ul {
+    font-size: 20px;
+    margin: 25px 5px 5px 25px;
+  }
+
+  .contato {
+    font-size: 20px;
+  }
+
+  .tel {
+    margin: 15px;
+    font-size: 20px;
+  }
+
+  .footer {
+    margin: 10px 100px 10px 50px;
+  }
+
+  .direito {
+    font-size: 20px;
+    margin: 25px 10px 10px 25px;
+  }
+
+  .fa-brands, .fa-regular, .fa-envelope {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  .row-first {
+    margin-bottom: 10px;
+    margin-top: 8px
+  }
+
+  .fo1 {
+    width: 100%;
+    bottom: 0;
+    height: 130px;
+    line-height: 15px;
+    font-size: 20px;
+  }
+
+  .contact a {
+    font-size: 20px;
+  }
+
+  .logo1 {
+    width: 35%;
+    margin: 25px 0px 0px 50px;
+    padding: 5px;
+  }
+
+  .log1 {
+    font-size: 44px;
+  }
+
+  .hf {
+    font-size: 50px;
+    margin: 25px;
+  }
+
+  .ulf {
+    margin: 25px;
+  }
+
+  .lif {
+    font-size: 20px;
+    margin: 25px;
+  }
+
+  .pf {
+    font-size: 20px;
+    margin: 25px;
+  }
+
+  .registrar {
+    font-size: 26px;
+  }
+
+  #logoc h1 {
+    font-size: 50px;
+  }
+
+  #logoc {
+    padding: 20px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+  }
+
+  #inserir {
+    padding: 20px 0px 20px 5px;
+  }
+
+  #inserir a {
+    padding: 20px;
+  }
+
+  #inserir i {
+    padding: 10px;
+  }
+}

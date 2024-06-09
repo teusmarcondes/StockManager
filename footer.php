@@ -9,6 +9,6 @@
         <p class="tel">Segunda a sexta-feira, das 9h às 18h.</p>
     </div>
     <div class="direito">
-        &copy; 2024 - Todos os direitos reservados
+        Mateus &copy; 2024 - Todos os direitos reservados
     </div>    
 </footer>
